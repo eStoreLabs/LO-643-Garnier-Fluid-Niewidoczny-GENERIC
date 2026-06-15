@@ -3,9 +3,6 @@
 // set up variables
 $text-main: "Montserrat", sans-serif;
 
-$fw-regular: 400;
-$fw-bold: 700;
-
 $fs-base: 16px;
 $fs-header: 32px;
 
@@ -15,10 +12,12 @@ $px-L: 24px;
 $px-XL: 32px;
 $px-XXL: 40px;
 
-$color-main: #0d1116;
+$color-main: #000000;
 $color-bg: #f6f8fa;
-$color-accent: #f6a255;
-$color-accent-2: #69a7dd;
+$color-dark-blue: #0499c3;
+$color-light-blue: #b6e1ef;
+$color-brown: #c64a4a;
+$color-yellow: #ffd841;
 
 $media-breakpoint-sm: 576px;
 $media-breakpoint-md: 768px;
@@ -28,15 +27,15 @@ $media-breakpoint-xl: 1200px;
 #es-rc #es-rc-content {
   font-family: $text-main;
   font-size: $fs-base;
-  font-weight: $fw-regular;
+  font-weight: 400;
   line-height: 1.2;
   color: $color-main;
   background-color: $color-bg;
-  max-width: 990px; //adjust, based on https://github.com/eStoreLabs/READ-ME/blob/main/DEVELOPMENT_GUIDELINES_FOR_GENERICS.md#2-styles
+  max-width: 1300px;
   margin: auto;
 
   ::selection {
-    background-color: $color-accent-2;
+    background-color: $color-light-blue;
     color: #fff;
   }
 
@@ -51,12 +50,56 @@ $media-breakpoint-xl: 1200px;
 
   img {
     width: 100%;
+    height: auto;
     display: block;
     margin: 0 auto;
   }
 
   button {
     display: block;
+  }
+
+  .es-kv {
+    &__photo {
+      position: relative;
+
+      &-container {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        @media (min-width: $media-breakpoint-md) {
+          & {
+            flex-direction: row;
+            align-items: baseline;
+          }
+        }
+      }
+    }
+
+    &__title {
+      position: absolute;
+      z-index: 1;
+      bottom: 2%;
+      left: 5%;
+      background-color: $color-bg;
+      border: 1px solid $color-main;
+      text-transform: uppercase;
+      padding: 11px 19px;
+
+      &--primary {
+        font-weight: 700;
+        font-size: clamp(1rem, 0.6958rem + 1.6782vw, 2.0594rem);
+      }
+
+      &--secondary {
+        font-size: clamp(1rem, 0.8439rem + 0.8614vw, 1.5437rem);
+      }
+
+      &--strikethrough {
+        text-decoration: line-through;
+      }
+    }
   }
 
   // Swiper styles, reset some of the inherent ones

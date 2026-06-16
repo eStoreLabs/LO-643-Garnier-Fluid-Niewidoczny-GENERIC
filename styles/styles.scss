@@ -477,6 +477,156 @@ $media-breakpoint-xl: 1200px;
     }
   }
 
+  .es-routine {
+    margin: 60px 20px auto;
+
+    @media (min-width: $media-breakpoint-lg) {
+      position: relative;
+      margin-bottom: 50px;
+    }
+
+    &__title {
+      font-size: 30px;
+      text-transform: uppercase;
+
+      & > span {
+        color: $color-brown;
+      }
+    }
+
+    &__steps {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+
+      @media (min-width: $media-breakpoint-md) {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 30px;
+      }
+
+      @media (min-width: $media-breakpoint-lg) {
+        margin-top: -100px;
+      }
+    }
+
+    &__bg-img {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      order: -1;
+      max-width: 400px;
+
+      @media (min-width: $media-breakpoint-md) {
+        order: 0;
+        max-width: 300px;
+      }
+
+      &--desktop {
+        display: none;
+
+        @media (min-width: $media-breakpoint-lg) {
+          display: block;
+          z-index: 0;
+          max-width: 450px;
+        }
+      }
+
+      &--mobile {
+        @media (min-width: $media-breakpoint-lg) {
+          display: none;
+        }
+      }
+    }
+
+    &__packshot {
+      display: none;
+
+      @media (min-width: $media-breakpoint-lg) {
+        display: flex;
+        width: 181px;
+        position: absolute;
+        top: 55%;
+        left: 46%;
+        transform: translate(-50%, -50%);
+        z-index: 3;
+      }
+    }
+
+    &__link {
+      display: block;
+      margin-left: auto;
+      margin-right: 0;
+      margin-top: 10px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: $fw-bold;
+      font-size: 14px;
+      text-align: center;
+      border-radius: 8px;
+      transition: all 0.3s ease-in-out;
+      background: $color-brown;
+      width: 230px;
+      padding: 12px 60px;
+
+      @media (min-width: $media-breakpoint-md) {
+        width: 180px;
+      }
+    }
+
+    &__step {
+      @media (min-width: $media-breakpoint-lg) {
+        margin-top: 150px;
+
+        ::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          background: $color-brown;
+          top: 74%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      &-title {
+        font-weight: $fw-bold;
+        font-size: 18px;
+        color: $color-brown;
+        background: $color-yellow;
+        width: 160px;
+        padding: 10px 35px;
+        text-transform: uppercase;
+        text-align: center;
+
+        @media (min-width: $media-breakpoint-md) {
+          &--2 {
+            margin-left: auto;
+            margin-right: 0;
+          }
+        }
+      }
+
+      &-description {
+        margin-top: 10px;
+        font-weight: $fw-bold;
+        font-size: 14px;
+
+        @media (min-width: $media-breakpoint-md) {
+          margin-bottom: 50px;
+        }
+
+        &--2 {
+          @media (min-width: $media-breakpoint-md) {
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+
   // Swiper styles, reset some of the inherent ones
   .es-slider {
     .swiper-button-prev:after,

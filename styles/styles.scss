@@ -245,12 +245,14 @@ $media-breakpoint-xl: 1200px;
 
   .es-tested {
     margin-top: 80px;
+    margin-bottom: 80px;
     position: relative;
     background-color: $color-bg2;
 
     @media (min-width: $media-breakpoint-sm) {
       & {
         margin-top: 150px;
+        margin-bottom: 150px;
       }
     }
 
@@ -361,6 +363,38 @@ $media-breakpoint-xl: 1200px;
           }
         }
       }
+    }
+  }
+
+  .es-how {
+    margin: auto 20px;
+
+    &__container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 50px;
+    }
+
+    &__title {
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: $fw-extrabold;
+      font-size: clamp(0.875rem, 0.5879rem + 1.5842vw, 1.875rem);
+    }
+
+    &__step {
+      flex: 0 1 364px;
+    }
+
+    &__text {
+      font-weight: $fw-bold;
+      font-size: clamp(0.875rem, 0.8032rem + 0.396vw, 1.125rem);
+      margin: 30px 0 6px;
+    }
+
+    &__desc {
+      font-size: clamp(0.875rem, 0.8032rem + 0.396vw, 1.125rem);
     }
   }
 

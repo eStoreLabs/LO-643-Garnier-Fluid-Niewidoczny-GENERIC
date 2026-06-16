@@ -184,12 +184,14 @@
 }
 #es-rc #es-rc-content .es-tested {
   margin-top: 80px;
+  margin-bottom: 80px;
   position: relative;
   background-color: #f1f1f1;
 }
 @media (min-width: 576px) {
   #es-rc #es-rc-content .es-tested {
     margin-top: 150px;
+    margin-bottom: 150px;
   }
 }
 @media (min-width: 768px) {
@@ -280,6 +282,32 @@
   #es-rc #es-rc-content .es-tested__effects-text {
     max-width: 90%;
   }
+}
+#es-rc #es-rc-content .es-how {
+  margin: auto 20px;
+}
+#es-rc #es-rc-content .es-how__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+#es-rc #es-rc-content .es-how__title {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: clamp(0.875rem, 0.5879rem + 1.5842vw, 1.875rem);
+}
+#es-rc #es-rc-content .es-how__step {
+  flex: 0 1 364px;
+}
+#es-rc #es-rc-content .es-how__text {
+  font-weight: 700;
+  font-size: clamp(0.875rem, 0.8032rem + 0.396vw, 1.125rem);
+  margin: 30px 0 6px;
+}
+#es-rc #es-rc-content .es-how__desc {
+  font-size: clamp(0.875rem, 0.8032rem + 0.396vw, 1.125rem);
 }
 #es-rc #es-rc-content .es-slider .swiper-button-prev:after,
 #es-rc #es-rc-content .es-slider .swiper-rtl .swiper-button-next:after,

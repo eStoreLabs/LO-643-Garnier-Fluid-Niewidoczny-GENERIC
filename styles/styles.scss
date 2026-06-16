@@ -5,6 +5,7 @@ $text-main: "Montserrat", sans-serif;
 
 $fw-regular: 400;
 $fw-bold: 700;
+$fw-extrabold: 800;
 
 $fs-base: 16px;
 $fs-header: 32px;
@@ -17,6 +18,7 @@ $px-XXL: 40px;
 
 $color-main: #000000;
 $color-bg: #fff;
+$color-bg2: #f1f1f1;
 $color-dark-blue: #0499c3;
 $color-light-blue: #b6e1ef;
 $color-brown: #c64a4a;
@@ -237,6 +239,127 @@ $media-breakpoint-xl: 1200px;
         font-weight: $fw-bold;
         margin-bottom: 13px;
         font-size: clamp(0.875rem, 0.8032rem + 0.396vw, 1.125rem);
+      }
+    }
+  }
+
+  .es-tested {
+    margin-top: 80px;
+    position: relative;
+    background-color: $color-bg2;
+
+    @media (min-width: $media-breakpoint-sm) {
+      & {
+        margin-top: 150px;
+      }
+    }
+
+    &__container {
+      @media (min-width: $media-breakpoint-md) {
+        & {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+    }
+
+    &__img {
+      display: none;
+      max-height: 110%;
+      width: auto;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+
+      @media (min-width: $media-breakpoint-sm) {
+        & {
+          display: block;
+        }
+      }
+
+      @media (min-width: $media-breakpoint-md) {
+        & {
+          max-height: 150%;
+          left: 50%;
+          right: unset;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+
+    &__title {
+      font-weight: $fw-extrabold;
+      font-size: clamp(1rem, 0.7488rem + 1.3861vw, 1.875rem);
+      text-transform: uppercase;
+      margin-top: 0;
+    }
+
+    &__section {
+      @media (min-width: $media-breakpoint-md) {
+        & {
+          min-height: 392px;
+        }
+      }
+    }
+
+    &__package {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      &-container {
+        display: grid;
+        align-items: center;
+        padding: 30px;
+
+        @media (min-width: $media-breakpoint-md) {
+          & {
+            justify-items: center;
+          }
+        }
+      }
+
+      @media (min-width: $media-breakpoint-md) {
+        & {
+          margin: 0;
+        }
+      }
+    }
+
+    &__single {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: clamp(0.875rem, 0.8032rem + 0.396vw, 1.125rem);
+
+      span {
+        font-weight: $fw-extrabold;
+        font-size: clamp(1rem, 0.7488rem + 1.3861vw, 1.875rem);
+      }
+    }
+
+    &__effects {
+      color: #fff;
+      background-color: rgba(233, 86, 13, 0.8);
+      border-radius: 0 12px 12px 0;
+
+      &-container {
+        padding-right: 8%;
+        display: grid;
+        align-items: center;
+        min-height: 300px;
+      }
+
+      &-text {
+        margin-left: auto;
+        padding: 30px;
+
+        @media (min-width: $media-breakpoint-md) {
+          & {
+            max-width: 90%;
+          }
+        }
       }
     }
   }

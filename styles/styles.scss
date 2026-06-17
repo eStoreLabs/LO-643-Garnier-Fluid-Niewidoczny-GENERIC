@@ -702,6 +702,36 @@ $media-breakpoint-xl: 1200px;
     }
   }
 
+  .es-footer {
+    padding-top: 48px;
+
+    &__disclaimer {
+      text-align: center;
+      margin-bottom: 32px;
+      font-size: 12px;
+    }
+
+    &__img {
+      width: auto;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+    &__logo {
+      margin-bottom: 16px;
+    }
+
+    &__wrapper {
+      background: linear-gradient(to right, #30663f, #167535, #30663f);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-evenly;
+      gap: 16px;
+      padding: 19px 16px;
+    }
+  }
+
   // Swiper styles, reset some of the inherent ones
   .es-slider {
     .swiper-button-prev:after,

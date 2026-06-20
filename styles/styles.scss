@@ -103,10 +103,8 @@ $media-breakpoint-xl: 1200px;
         gap: 5px;
 
         @media (min-width: $media-breakpoint-md) {
-          & {
-            flex-direction: row;
-            align-items: baseline;
-          }
+          flex-direction: row;
+          align-items: baseline;
         }
       }
     }
@@ -187,9 +185,7 @@ $media-breakpoint-xl: 1200px;
       align-items: center;
 
       @media (min-width: $media-breakpoint-md) {
-        & {
-          display: inline-block;
-        }
+        display: inline-block;
       }
     }
 
@@ -200,9 +196,7 @@ $media-breakpoint-xl: 1200px;
       margin-top: 18px;
 
       @media (min-width: $media-breakpoint-md) {
-        & {
-          margin-left: 7px;
-        }
+        margin-left: 7px;
       }
     }
 
@@ -213,9 +207,7 @@ $media-breakpoint-xl: 1200px;
       gap: 18px;
 
       @media (min-width: $media-breakpoint-sm) {
-        & {
-          grid-template-columns: 1fr 1fr;
-        }
+        grid-template-columns: 1fr 1fr;
       }
 
       &:hover .es-benefits__single {
@@ -232,9 +224,7 @@ $media-breakpoint-xl: 1200px;
         transform: translate(-50%, -50%);
 
         @media (min-width: $media-breakpoint-sm) {
-          & {
-            display: block;
-          }
+          display: block;
         }
       }
     }
@@ -280,18 +270,14 @@ $media-breakpoint-xl: 1200px;
     background-color: $color-bg2;
 
     @media (min-width: $media-breakpoint-sm) {
-      & {
-        margin-top: 150px;
-        margin-bottom: 150px;
-      }
+      margin-top: 150px;
+      margin-bottom: 150px;
     }
 
     &__container {
       @media (min-width: $media-breakpoint-md) {
-        & {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-        }
+        display: grid;
+        grid-template-columns: 1fr 1fr;
       }
     }
 
@@ -305,18 +291,14 @@ $media-breakpoint-xl: 1200px;
       transform: translateY(-50%);
 
       @media (min-width: $media-breakpoint-sm) {
-        & {
-          display: block;
-        }
+        display: block;
       }
 
       @media (min-width: $media-breakpoint-md) {
-        & {
-          max-height: 150%;
-          left: 50%;
-          right: unset;
-          transform: translate(-50%, -50%);
-        }
+        max-height: 150%;
+        left: 50%;
+        right: unset;
+        transform: translate(-50%, -50%);
       }
     }
 
@@ -330,9 +312,7 @@ $media-breakpoint-xl: 1200px;
 
     &__section {
       @media (min-width: $media-breakpoint-md) {
-        & {
-          min-height: 392px;
-        }
+        min-height: 392px;
       }
     }
 
@@ -347,17 +327,13 @@ $media-breakpoint-xl: 1200px;
         padding: 30px;
 
         @media (min-width: $media-breakpoint-md) {
-          & {
-            justify-items: center;
-            max-width: 95%;
-          }
+          justify-items: center;
+          max-width: 95%;
         }
       }
 
       @media (min-width: $media-breakpoint-md) {
-        & {
-          margin: 0;
-        }
+        margin: 0;
       }
     }
 
@@ -390,16 +366,12 @@ $media-breakpoint-xl: 1200px;
         padding: 30px;
 
         @media (min-width: $media-breakpoint-sm) {
-          & {
-            padding-right: 80px;
-          }
+          padding-right: 80px;
         }
 
         @media (min-width: $media-breakpoint-md) {
-          & {
-            padding-right: 30px;
-            max-width: 90%;
-          }
+          padding-right: 30px;
+          max-width: 90%;
         }
       }
     }
@@ -457,9 +429,7 @@ $media-breakpoint-xl: 1200px;
     margin-bottom: 80px;
 
     @media (min-width: $media-breakpoint-md) {
-      & {
-        margin-top: 150px;
-      }
+      margin-top: 150px;
 
       &::after {
         content: "";
@@ -482,9 +452,7 @@ $media-breakpoint-xl: 1200px;
       height: auto;
 
       @media (min-width: $media-breakpoint-md) {
-        & {
-          display: block;
-        }
+        display: block;
       }
 
       &--left {
@@ -506,12 +474,10 @@ $media-breakpoint-xl: 1200px;
       margin: auto 20px;
 
       @media (min-width: $media-breakpoint-md) {
-        & {
-          margin: auto 50px;
-          flex-direction: row;
-          justify-content: space-between;
-          align-items: center;
-        }
+        margin: auto 50px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
       }
     }
 

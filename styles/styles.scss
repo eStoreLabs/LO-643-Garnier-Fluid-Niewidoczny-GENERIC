@@ -198,6 +198,10 @@ $media-breakpoint-xl: 1200px;
         }
       }
 
+      &:hover .es-benefits__single {
+        opacity: 0.8;
+      }
+
       &-bg {
         display: none;
         position: absolute;
@@ -229,6 +233,11 @@ $media-breakpoint-xl: 1200px;
       padding-top: 8%;
       background-color: #fff;
       max-width: 291px;
+
+      &:hover {
+        opacity: 1 !important;
+        transform: scale(1.05);
+      }
     }
 
     &__text {
@@ -396,6 +405,18 @@ $media-breakpoint-xl: 1200px;
 
     &__desc {
       font-size: clamp(0.875rem, 0.8032rem + 0.396vw, 1.125rem);
+    }
+
+    &__photo {
+      overflow: hidden;
+
+      &:hover > .es-how__img {
+        transform: scale(1.05);
+      }
+    }
+
+    &__img {
+      transition: all 0.3s;
     }
   }
 
@@ -643,6 +664,19 @@ $media-breakpoint-xl: 1200px;
       display: flex;
       flex-direction: column;
       align-items: center;
+
+      &:has(.es-cross__link:hover, .es-cross__packshot:hover) {
+        .es-cross__img {
+          transform: scale(1.05);
+        }
+        .es-cross__link {
+          background-color: darken($color-brown, 15%);
+        }
+      }
+    }
+
+    &__img {
+      transition: all 0.3s;
     }
 
     &__text {
@@ -748,6 +782,7 @@ $media-breakpoint-xl: 1200px;
       justify-content: unset;
       margin: 0;
       display: unset;
+      cursor: pointer;
     }
     .swiper-button-disabled {
       opacity: 0;

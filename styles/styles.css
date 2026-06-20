@@ -144,6 +144,9 @@
     grid-template-columns: 1fr 1fr;
   }
 }
+#es-rc #es-rc-content .es-benefits__cards:hover .es-benefits__single {
+  opacity: 0.8;
+}
 #es-rc #es-rc-content .es-benefits__cards-bg {
   display: none;
   position: absolute;
@@ -171,6 +174,10 @@
   padding-top: 8%;
   background-color: #fff;
   max-width: 291px;
+}
+#es-rc #es-rc-content .es-benefits__single:hover {
+  opacity: 1 !important;
+  transform: scale(1.05);
 }
 #es-rc #es-rc-content .es-benefits__text {
   font-size: clamp(0.875rem, 0.8391rem + 0.198vw, 1rem);
@@ -308,6 +315,15 @@
 }
 #es-rc #es-rc-content .es-how__desc {
   font-size: clamp(0.875rem, 0.8032rem + 0.396vw, 1.125rem);
+}
+#es-rc #es-rc-content .es-how__photo {
+  overflow: hidden;
+}
+#es-rc #es-rc-content .es-how__photo:hover > .es-how__img {
+  transform: scale(1.05);
+}
+#es-rc #es-rc-content .es-how__img {
+  transition: all 0.3s;
 }
 #es-rc #es-rc-content .es-color {
   position: relative;
@@ -535,6 +551,15 @@
   flex-direction: column;
   align-items: center;
 }
+#es-rc #es-rc-content .es-cross__product:has(.es-cross__link:hover, .es-cross__packshot:hover) .es-cross__img {
+  transform: scale(1.05);
+}
+#es-rc #es-rc-content .es-cross__product:has(.es-cross__link:hover, .es-cross__packshot:hover) .es-cross__link {
+  background-color: rgb(148.6785714286, 46.8214285714, 46.8214285714);
+}
+#es-rc #es-rc-content .es-cross__img {
+  transition: all 0.3s;
+}
 #es-rc #es-rc-content .es-cross__text {
   font-size: 18px;
   font-weight: 700;
@@ -621,6 +646,7 @@
   justify-content: unset;
   margin: 0;
   display: unset;
+  cursor: pointer;
 }
 #es-rc #es-rc-content .es-slider .swiper-button-disabled {
   opacity: 0;

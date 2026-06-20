@@ -7,7 +7,7 @@ $fw-regular: 400;
 $fw-bold: 700;
 $fw-extrabold: 800;
 
-$fs-base: 16px;
+$fs-base: 1rem; // Change to 16px if rem is banned by eretailer
 
 $color-main: #000000;
 $color-bg: #fff;
@@ -24,7 +24,7 @@ $media-breakpoint-lg: 992px;
 $media-breakpoint-xl: 1200px;
 
 @mixin es-btn {
-  font-size: $fs-base;
+  font-size: clamp(1 * $fs-base, 0.9641 * $fs-base + 0.198vw, 1.125 * $fs-base);
   font-weight: $fw-bold;
   text-align: center;
   border-radius: 10px;
@@ -38,6 +38,10 @@ $media-breakpoint-xl: 1200px;
   }
 }
 
+@mixin es-title {
+  font-size: clamp(1.25 * $fs-base, 0.7488 * $fs-base + 1.3861vw, 1.875 * $fs-base);
+}
+
 #es-rc #es-rc-content {
   font-family: $text-main;
   font-size: $fs-base;
@@ -48,7 +52,7 @@ $media-breakpoint-xl: 1200px;
   max-width: 1300px;
   margin: auto;
 
-  ::selection {
+  &::selection {
     background-color: $color-light-blue;
     color: #fff;
   }
@@ -68,6 +72,10 @@ $media-breakpoint-xl: 1200px;
     font-weight: inherit;
     color: inherit;
     margin: 0;
+  }
+
+  strong {
+    font-weight: $fw-bold;
   }
 
   a {
@@ -115,11 +123,11 @@ $media-breakpoint-xl: 1200px;
 
       &--primary {
         font-weight: $fw-bold;
-        font-size: clamp(1rem, 0.6958rem + 1.6782vw, 2.0594rem);
+        font-size: clamp(1 * $fs-base, 0.6949 * $fs-base + 1.6832vw, 2.0625 * $fs-base);
       }
 
       &--secondary {
-        font-size: clamp(1rem, 0.8439rem + 0.8614vw, 1.5437rem);
+        font-size: clamp(1 * $fs-base, 0.8439 * $fs-base + 0.8614vw, 1.5437 * $fs-base);
       }
 
       &--strikethrough {
@@ -142,7 +150,8 @@ $media-breakpoint-xl: 1200px;
     }
 
     &__title {
-      font-weight: 800;
+      @include es-title;
+      font-weight: $fw-extrabold;
       text-transform: uppercase;
       text-align: center;
       margin-bottom: 40px;
@@ -160,7 +169,7 @@ $media-breakpoint-xl: 1200px;
         position: absolute;
         top: 10%;
         transform: translateX(-50%);
-        font-size: clamp(0.875rem, 0.8032rem + 0.396vw, 1.125rem);
+        font-size: clamp(0.6875 * $fs-base, 0.5619 * $fs-base + 0.6931vw, 1.125 * $fs-base);
 
         &--1 {
           left: 25%;
@@ -252,14 +261,14 @@ $media-breakpoint-xl: 1200px;
     }
 
     &__text {
-      font-size: clamp(0.875rem, 0.8391rem + 0.198vw, 1rem);
+      font-size: clamp(0.875 * $fs-base, 0.8391 * $fs-base + 0.198vw, 1 * $fs-base);
       text-align: center;
       padding: 20px 10px;
 
       &--primary {
         font-weight: $fw-bold;
         margin-bottom: 13px;
-        font-size: clamp(0.875rem, 0.8032rem + 0.396vw, 1.125rem);
+        font-size: clamp(1 * $fs-base, 0.9641 * $fs-base + 0.198vw, 1.125 * $fs-base);
       }
     }
   }
@@ -312,8 +321,8 @@ $media-breakpoint-xl: 1200px;
     }
 
     &__title {
+      @include es-title;
       font-weight: $fw-extrabold;
-      font-size: clamp(1rem, 0.7488rem + 1.3861vw, 1.875rem);
       text-transform: uppercase;
       margin-top: 0;
       margin-bottom: 25px;
@@ -340,6 +349,7 @@ $media-breakpoint-xl: 1200px;
         @media (min-width: $media-breakpoint-md) {
           & {
             justify-items: center;
+            max-width: 95%;
           }
         }
       }
@@ -355,11 +365,11 @@ $media-breakpoint-xl: 1200px;
       display: flex;
       align-items: center;
       gap: 18px;
-      font-size: clamp(0.875rem, 0.8032rem + 0.396vw, 1.125rem);
+      font-size: clamp(1 * $fs-base, 0.9641 * $fs-base + 0.198vw, 1.125 * $fs-base);
 
       span {
+        @include es-title;
         font-weight: $fw-extrabold;
-        font-size: clamp(1rem, 0.7488rem + 1.3861vw, 1.875rem);
       }
     }
 
@@ -379,8 +389,15 @@ $media-breakpoint-xl: 1200px;
         margin-left: auto;
         padding: 30px;
 
+        @media (min-width: $media-breakpoint-sm) {
+          & {
+            padding-right: 80px;
+          }
+        }
+
         @media (min-width: $media-breakpoint-md) {
           & {
+            padding-right: 30px;
             max-width: 90%;
           }
         }
@@ -399,10 +416,10 @@ $media-breakpoint-xl: 1200px;
     }
 
     &__title {
+      @include es-title;
       text-align: center;
       text-transform: uppercase;
       font-weight: $fw-extrabold;
-      font-size: clamp(0.875rem, 0.5879rem + 1.5842vw, 1.875rem);
       margin-bottom: 35px;
     }
 
@@ -412,12 +429,12 @@ $media-breakpoint-xl: 1200px;
 
     &__text {
       font-weight: $fw-bold;
-      font-size: clamp(0.875rem, 0.8032rem + 0.396vw, 1.125rem);
+      font-size: clamp(1 * $fs-base, 0.9641 * $fs-base + 0.198vw, 1.125 * $fs-base);
       margin: 30px 0 6px;
     }
 
     &__desc {
-      font-size: clamp(0.875rem, 0.8032rem + 0.396vw, 1.125rem);
+      font-size: clamp(1 * $fs-base, 0.9641 * $fs-base + 0.198vw, 1.125 * $fs-base);
     }
 
     &__photo {
@@ -499,8 +516,8 @@ $media-breakpoint-xl: 1200px;
     }
 
     &__title {
+      @include es-title;
       font-weight: $fw-extrabold;
-      font-size: clamp(0.875rem, 0.5879rem + 1.5842vw, 1.875rem);
       text-transform: uppercase;
       color: $color-brown;
       margin-bottom: 12px;
@@ -508,7 +525,7 @@ $media-breakpoint-xl: 1200px;
 
     &__subtitle {
       font-weight: $fw-extrabold;
-      font-size: clamp(0.875rem, 0.7673rem + 0.5941vw, 1.25rem);
+      font-size: clamp(1 * $fs-base, 0.9282 * $fs-base + 0.396vw, 1.25 * $fs-base);
       text-transform: uppercase;
       margin-bottom: 10px;
     }
@@ -523,7 +540,8 @@ $media-breakpoint-xl: 1200px;
     }
 
     &__title {
-      font-size: 30px;
+      @include es-title;
+      font-weight: $fw-bold;
       text-transform: uppercase;
 
       & > span {
@@ -557,7 +575,7 @@ $media-breakpoint-xl: 1200px;
 
       @media (min-width: $media-breakpoint-md) {
         order: 0;
-        max-width: 300px;
+        max-width: 250px;
       }
 
       &--desktop {
@@ -597,15 +615,21 @@ $media-breakpoint-xl: 1200px;
       margin-left: auto;
       margin-right: 0;
       margin-top: 10px;
-      width: 230px;
+      max-width: 230px;
       padding: 12px 60px;
     }
 
     &__step {
+      width: 230px;
+
+      @media (min-width: $media-breakpoint-md) {
+        width: unset;
+      }
+
       @media (min-width: $media-breakpoint-lg) {
         margin-top: 150px;
 
-        ::after {
+        &::after {
           content: "";
           position: absolute;
           width: 100%;
@@ -619,7 +643,7 @@ $media-breakpoint-xl: 1200px;
 
       &-title {
         font-weight: $fw-bold;
-        font-size: 18px;
+        font-size: clamp(1 * $fs-base, 0.9641 * $fs-base + 0.198vw, 1.125 * $fs-base);
         color: $color-brown;
         background: $color-yellow;
         width: 160px;
@@ -636,9 +660,9 @@ $media-breakpoint-xl: 1200px;
       }
 
       &-description {
+        font-size: clamp(1 * $fs-base, 0.9641 * $fs-base + 0.198vw, 1.125 * $fs-base);
         margin-top: 10px;
         font-weight: $fw-bold;
-        font-size: 14px;
 
         @media (min-width: $media-breakpoint-md) {
           margin-bottom: 50px;
@@ -657,7 +681,7 @@ $media-breakpoint-xl: 1200px;
     margin: 120px 20px 40px;
 
     &__title {
-      font-size: 30px;
+      @include es-title;
       font-weight: $fw-bold;
       text-align: center;
       text-transform: uppercase;
@@ -684,7 +708,7 @@ $media-breakpoint-xl: 1200px;
     }
 
     &__text {
-      font-size: 18px;
+      font-size: clamp(1 * $fs-base, 0.9641 * $fs-base + 0.198vw, 1.125 * $fs-base);
       font-weight: $fw-bold;
       text-align: center;
       margin: 16px auto;
@@ -695,7 +719,7 @@ $media-breakpoint-xl: 1200px;
       display: block;
       margin-top: 10px;
       width: 100%;
-      padding: 12px 60px;
+      padding: 12px;
     }
 
     &__slider {
@@ -739,7 +763,7 @@ $media-breakpoint-xl: 1200px;
     &__disclaimer {
       text-align: center;
       margin-bottom: 32px;
-      font-size: 12px;
+      font-size: clamp(0.5625 * $fs-base, 0.5087 * $fs-base + 0.297vw, 0.75 * $fs-base);
     }
 
     &__img {

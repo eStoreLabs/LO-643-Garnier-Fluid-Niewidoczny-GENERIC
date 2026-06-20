@@ -1,6 +1,6 @@
 #es-rc #es-rc-content {
   font-family: "Montserrat", sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.2;
   color: #000000;
@@ -8,11 +8,11 @@
   max-width: 1300px;
   margin: auto;
 }
-#es-rc #es-rc-content ::-moz-selection {
+#es-rc #es-rc-content::-moz-selection {
   background-color: #b6e1ef;
   color: #fff;
 }
-#es-rc #es-rc-content ::selection {
+#es-rc #es-rc-content::selection {
   background-color: #b6e1ef;
   color: #fff;
 }
@@ -29,6 +29,9 @@
   font-weight: inherit;
   color: inherit;
   margin: 0;
+}
+#es-rc #es-rc-content strong {
+  font-weight: 700;
 }
 #es-rc #es-rc-content a {
   display: inline-block;
@@ -68,7 +71,7 @@
 }
 #es-rc #es-rc-content .es-kv__title--primary {
   font-weight: 700;
-  font-size: clamp(1rem, 0.6958rem + 1.6782vw, 2.0594rem);
+  font-size: clamp(1rem, 0.6949rem + 1.6832vw, 2.0625rem);
 }
 #es-rc #es-rc-content .es-kv__title--secondary {
   font-size: clamp(1rem, 0.8439rem + 0.8614vw, 1.5437rem);
@@ -91,6 +94,7 @@
   }
 }
 #es-rc #es-rc-content .es-benefits__title {
+  font-size: clamp(1.25rem, 0.7488rem + 1.3861vw, 1.875rem);
   font-weight: 800;
   text-transform: uppercase;
   text-align: center;
@@ -106,7 +110,7 @@
   position: absolute;
   top: 10%;
   transform: translateX(-50%);
-  font-size: clamp(0.875rem, 0.8032rem + 0.396vw, 1.125rem);
+  font-size: clamp(0.6875rem, 0.5619rem + 0.6931vw, 1.125rem);
 }
 #es-rc #es-rc-content .es-benefits__img-text--1 {
   left: 25%;
@@ -126,7 +130,7 @@
   }
 }
 #es-rc #es-rc-content .es-benefits__link {
-  font-size: 16px;
+  font-size: clamp(1rem, 0.9641rem + 0.198vw, 1.125rem);
   font-weight: 700;
   text-align: center;
   border-radius: 10px;
@@ -202,7 +206,7 @@
 #es-rc #es-rc-content .es-benefits__text--primary {
   font-weight: 700;
   margin-bottom: 13px;
-  font-size: clamp(0.875rem, 0.8032rem + 0.396vw, 1.125rem);
+  font-size: clamp(1rem, 0.9641rem + 0.198vw, 1.125rem);
 }
 #es-rc #es-rc-content .es-tested {
   margin-top: 80px;
@@ -245,8 +249,8 @@
   }
 }
 #es-rc #es-rc-content .es-tested__title {
+  font-size: clamp(1.25rem, 0.7488rem + 1.3861vw, 1.875rem);
   font-weight: 800;
-  font-size: clamp(1rem, 0.7488rem + 1.3861vw, 1.875rem);
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 25px;
@@ -269,6 +273,7 @@
 @media (min-width: 768px) {
   #es-rc #es-rc-content .es-tested__package-container {
     justify-items: center;
+    max-width: 95%;
   }
 }
 @media (min-width: 768px) {
@@ -280,11 +285,11 @@
   display: flex;
   align-items: center;
   gap: 18px;
-  font-size: clamp(0.875rem, 0.8032rem + 0.396vw, 1.125rem);
+  font-size: clamp(1rem, 0.9641rem + 0.198vw, 1.125rem);
 }
 #es-rc #es-rc-content .es-tested__single span {
+  font-size: clamp(1.25rem, 0.7488rem + 1.3861vw, 1.875rem);
   font-weight: 800;
-  font-size: clamp(1rem, 0.7488rem + 1.3861vw, 1.875rem);
 }
 #es-rc #es-rc-content .es-tested__effects {
   color: #fff;
@@ -301,8 +306,14 @@
   margin-left: auto;
   padding: 30px;
 }
+@media (min-width: 576px) {
+  #es-rc #es-rc-content .es-tested__effects-text {
+    padding-right: 80px;
+  }
+}
 @media (min-width: 768px) {
   #es-rc #es-rc-content .es-tested__effects-text {
+    padding-right: 30px;
     max-width: 90%;
   }
 }
@@ -316,10 +327,10 @@
   gap: 50px;
 }
 #es-rc #es-rc-content .es-how__title {
+  font-size: clamp(1.25rem, 0.7488rem + 1.3861vw, 1.875rem);
   text-align: center;
   text-transform: uppercase;
   font-weight: 800;
-  font-size: clamp(0.875rem, 0.5879rem + 1.5842vw, 1.875rem);
   margin-bottom: 35px;
 }
 #es-rc #es-rc-content .es-how__step {
@@ -327,11 +338,11 @@
 }
 #es-rc #es-rc-content .es-how__text {
   font-weight: 700;
-  font-size: clamp(0.875rem, 0.8032rem + 0.396vw, 1.125rem);
+  font-size: clamp(1rem, 0.9641rem + 0.198vw, 1.125rem);
   margin: 30px 0 6px;
 }
 #es-rc #es-rc-content .es-how__desc {
-  font-size: clamp(0.875rem, 0.8032rem + 0.396vw, 1.125rem);
+  font-size: clamp(1rem, 0.9641rem + 0.198vw, 1.125rem);
 }
 #es-rc #es-rc-content .es-how__photo {
   overflow: hidden;
@@ -400,15 +411,15 @@
   }
 }
 #es-rc #es-rc-content .es-color__title {
+  font-size: clamp(1.25rem, 0.7488rem + 1.3861vw, 1.875rem);
   font-weight: 800;
-  font-size: clamp(0.875rem, 0.5879rem + 1.5842vw, 1.875rem);
   text-transform: uppercase;
   color: #c64a4a;
   margin-bottom: 12px;
 }
 #es-rc #es-rc-content .es-color__subtitle {
   font-weight: 800;
-  font-size: clamp(0.875rem, 0.7673rem + 0.5941vw, 1.25rem);
+  font-size: clamp(1rem, 0.9282rem + 0.396vw, 1.25rem);
   text-transform: uppercase;
   margin-bottom: 10px;
 }
@@ -422,7 +433,8 @@
   }
 }
 #es-rc #es-rc-content .es-routine__title {
-  font-size: 30px;
+  font-size: clamp(1.25rem, 0.7488rem + 1.3861vw, 1.875rem);
+  font-weight: 700;
   text-transform: uppercase;
 }
 #es-rc #es-rc-content .es-routine__title > span {
@@ -456,7 +468,7 @@
 @media (min-width: 768px) {
   #es-rc #es-rc-content .es-routine__bg-img {
     order: 0;
-    max-width: 300px;
+    max-width: 250px;
   }
 }
 #es-rc #es-rc-content .es-routine__bg-img--desktop {
@@ -489,7 +501,7 @@
   }
 }
 #es-rc #es-rc-content .es-routine__link {
-  font-size: 16px;
+  font-size: clamp(1rem, 0.9641rem + 0.198vw, 1.125rem);
   font-weight: 700;
   text-align: center;
   border-radius: 10px;
@@ -506,14 +518,22 @@
   margin-left: auto;
   margin-right: 0;
   margin-top: 10px;
-  width: 230px;
+  max-width: 230px;
   padding: 12px 60px;
+}
+#es-rc #es-rc-content .es-routine__step {
+  width: 230px;
+}
+@media (min-width: 768px) {
+  #es-rc #es-rc-content .es-routine__step {
+    width: unset;
+  }
 }
 @media (min-width: 992px) {
   #es-rc #es-rc-content .es-routine__step {
     margin-top: 150px;
   }
-  #es-rc #es-rc-content .es-routine__step ::after {
+  #es-rc #es-rc-content .es-routine__step::after {
     content: "";
     position: absolute;
     width: 100%;
@@ -526,7 +546,7 @@
 }
 #es-rc #es-rc-content .es-routine__step-title {
   font-weight: 700;
-  font-size: 18px;
+  font-size: clamp(1rem, 0.9641rem + 0.198vw, 1.125rem);
   color: #c64a4a;
   background: #ffd841;
   width: 160px;
@@ -541,9 +561,9 @@
   }
 }
 #es-rc #es-rc-content .es-routine__step-description {
+  font-size: clamp(1rem, 0.9641rem + 0.198vw, 1.125rem);
   margin-top: 10px;
   font-weight: 700;
-  font-size: 14px;
 }
 @media (min-width: 768px) {
   #es-rc #es-rc-content .es-routine__step-description {
@@ -559,7 +579,7 @@
   margin: 120px 20px 40px;
 }
 #es-rc #es-rc-content .es-cross__title {
-  font-size: 30px;
+  font-size: clamp(1.25rem, 0.7488rem + 1.3861vw, 1.875rem);
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
@@ -580,13 +600,13 @@
   transition: all 0.3s;
 }
 #es-rc #es-rc-content .es-cross__text {
-  font-size: 18px;
+  font-size: clamp(1rem, 0.9641rem + 0.198vw, 1.125rem);
   font-weight: 700;
   text-align: center;
   margin: 16px auto;
 }
 #es-rc #es-rc-content .es-cross__link {
-  font-size: 16px;
+  font-size: clamp(1rem, 0.9641rem + 0.198vw, 1.125rem);
   font-weight: 700;
   text-align: center;
   border-radius: 10px;
@@ -602,7 +622,7 @@
   display: block;
   margin-top: 10px;
   width: 100%;
-  padding: 12px 60px;
+  padding: 12px;
 }
 #es-rc #es-rc-content .es-cross__slider {
   position: relative;
@@ -637,7 +657,7 @@
 #es-rc #es-rc-content .es-footer__disclaimer {
   text-align: center;
   margin-bottom: 32px;
-  font-size: 12px;
+  font-size: clamp(0.5625rem, 0.5087rem + 0.297vw, 0.75rem);
 }
 #es-rc #es-rc-content .es-footer__img {
   width: auto;

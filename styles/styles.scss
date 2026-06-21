@@ -183,20 +183,19 @@ $media-breakpoint-xl: 1200px;
       display: flex;
       flex-direction: column;
       align-items: center;
-
-      @media (min-width: $media-breakpoint-md) {
-        display: inline-block;
-      }
     }
 
     &__link {
       @include es-btn;
       padding: 12px;
-      width: 45%;
-      margin-top: 18px;
+      width: 100%;
+      margin: 18px 7px 0;
 
-      @media (min-width: $media-breakpoint-md) {
-        margin-left: 7px;
+      &-wrapper {
+        width: 50%;
+        align-self: flex-start;
+        display: flex;
+        justify-content: center;
       }
     }
 

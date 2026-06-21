@@ -124,11 +124,6 @@
   flex-direction: column;
   align-items: center;
 }
-@media (min-width: 768px) {
-  #es-rc #es-rc-content .es-benefits__content {
-    display: inline-block;
-  }
-}
 #es-rc #es-rc-content .es-benefits__link {
   font-size: clamp(1rem, 0.9641rem + 0.198vw, 1.125rem);
   font-weight: 700;
@@ -144,13 +139,14 @@
 }
 #es-rc #es-rc-content .es-benefits__link {
   padding: 12px;
-  width: 45%;
-  margin-top: 18px;
+  width: 100%;
+  margin: 18px 7px 0;
 }
-@media (min-width: 768px) {
-  #es-rc #es-rc-content .es-benefits__link {
-    margin-left: 7px;
-  }
+#es-rc #es-rc-content .es-benefits__link-wrapper {
+  width: 50%;
+  align-self: flex-start;
+  display: flex;
+  justify-content: center;
 }
 #es-rc #es-rc-content .es-benefits__cards {
   position: relative;

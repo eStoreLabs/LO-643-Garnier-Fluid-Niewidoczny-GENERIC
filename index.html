@@ -434,19 +434,19 @@
           document.querySelector("#es-rc #es-rc-content .es-slider-no-js").classList.remove("es-slider-no-js");
 
           (() => {
-            const swiper = new Swiper("#es-rc .es-cross__slider", {
+            const swiper = new Swiper("#es-rc #es-rc-content .es-cross__slider", {
               autoHeight: true,
               slidesPerView: 1,
               spaceBetween: 20,
               slidesOffsetBefore: 50,
               slidesOffsetAfter: 50,
               pagination: {
-                el: "#es-rc .es-cross__slider-pagination",
+                el: "#es-rc #es-rc-content .es-cross__slider-pagination",
                 clickable: true,
               },
               navigation: {
-                prevEl: "#es-rc .es-cross__slider-btns--prev",
-                nextEl: "#es-rc .es-cross__slider-btns--next",
+                prevEl: "#es-rc #es-rc-content .es-cross__slider-btns--prev",
+                nextEl: "#es-rc #es-rc-content .es-cross__slider-btns--next",
               },
 
               breakpoints: {
